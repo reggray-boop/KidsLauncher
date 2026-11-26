@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F0"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/lock_bg"
+            android:importantForAccessibility="no"
+            android:padding="18dp"
+            android:src="@drawable/ic_lock" />
+
+        <TextView
+            android:id="@+id/pin_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#333333"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pin_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="#555555"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/pin_input"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:hint="PIN"
+            android:importantForAutofill="no"
+            android:inputType="numberPassword"
+            android:maxLength="12"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/pin_confirm"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:hint="Type the PIN again"
+            android:importantForAutofill="no"
+            android:inputType="numberPassword"
+            android:maxLength="12"
+            android:textSize="28sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/pin_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#D32F2F"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/pin_cancel"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/pin_ok"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="OK" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

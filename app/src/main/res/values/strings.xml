@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kids Launcher</string>
+    <string name="no_apps">No apps yet.\nA grown-up can hold the lock button to add some.</string>
+    <string name="parent_button_desc">Parent settings (press and hold)</string>
+</resources>

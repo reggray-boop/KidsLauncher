@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop" />
+
+    <GridView
+        android:id="@+id/app_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:horizontalSpacing="24dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="auto_fit"
+        android:paddingStart="32dp"
+        android:paddingTop="96dp"
+        android:paddingEnd="32dp"
+        android:paddingBottom="48dp"
+        android:scrollbars="none"
+        android:stretchMode="spacingWidthUniform"
+        android:verticalSpacing="32dp" />
+
+    <TextView
+        android:id="@+id/empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="32dp"
+        android:shadowColor="#AA000000"
+        android:shadowDy="2"
+        android:shadowRadius="6"
+        android:text="@string/no_apps"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:visibility="gone" />
+
+    <!-- Parent button: must be held for 3 seconds, then asks for the PIN -->
+    <ImageButton
+        android:id="@+id/parent_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="20dp"
+        android:background="@drawable/lock_bg"
+        android:contentDescription="@string/parent_button_desc"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_lock" />
+
+    <!-- Shown only when the parent has switched kid mode off -->
+    <LinearLayout
+        android:id="@+id/paused_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#E6222222"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="56dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Kid mode is OFF. The tablet is unlocked."
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/android_settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Android settings" />
+
+        <Button
+            android:id="@+id/home_settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Change home app" />
+
+        <Button
+            android:id="@+id/resume_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Turn kid mode ON" />
+    </LinearLayout>
+</FrameLayout>

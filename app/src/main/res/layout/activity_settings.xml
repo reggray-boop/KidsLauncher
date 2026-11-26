@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F0"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="40dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="48dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Parent settings"
+                android:textColor="#222222"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/done_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done" />
+        </LinearLayout>
+
+        <!-- Apps -->
+        <TextView style="@style/SectionTitle" android:text="Apps" />
+        <TextView
+            android:id="@+id/apps_summary"
+            style="@style/BodyText" />
+        <Button
+            android:id="@+id/choose_apps_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Choose apps" />
+
+        <!-- Wallpaper -->
+        <TextView style="@style/SectionTitle" android:text="Wallpaper" />
+        <ImageView
+            android:id="@+id/wallpaper_preview"
+            android:layout_width="240dp"
+            android:layout_height="150dp"
+            android:background="@drawable/default_bg"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/choose_wallpaper_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose picture" />
+            <Button
+                android:id="@+id/remove_wallpaper_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Remove photo" />
+        </LinearLayout>
+        <TextView
+            style="@style/BodyText"
+            android:layout_marginTop="16dp"
+            android:text="Or tap a ready-made background:" />
+        <GridLayout
+            android:id="@+id/preset_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:columnCount="7"
+            android:useDefaultMargins="false" />
+
+        <!-- Icon size -->
+        <TextView style="@style/SectionTitle" android:text="Icon size" />
+        <TextView
+            android:id="@+id/icon_size_label"
+            style="@style/BodyText" />
+        <SeekBar
+            android:id="@+id/icon_size_seek"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+        <!-- Volume -->
+        <TextView style="@style/SectionTitle" android:text="Volume limit" />
+        <Switch
+            android:id="@+id/volume_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Limit the maximum volume"
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/volume_label"
+            style="@style/BodyText" />
+        <SeekBar
+            android:id="@+id/volume_seek"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+        <!-- PIN -->
+        <TextView style="@style/SectionTitle" android:text="PIN" />
+        <Button
+            android:id="@+id/change_pin_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change PIN" />
+
+        <!-- Lock -->
+        <TextView style="@style/SectionTitle" android:text="Tablet lock" />
+        <TextView
+            android:id="@+id/lock_status"
+            style="@style/BodyText"
+            android:textIsSelectable="true" />
+        <Button
+            android:id="@+id/pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Turn kid mode OFF (unlock tablet)" />
+        <Button
+            android:id="@+id/remove_owner_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Remove full lock (to uninstall)" />
+    </LinearLayout>
+</ScrollView>
